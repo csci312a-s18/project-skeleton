@@ -4,7 +4,7 @@ This repository combines the client and server into a single repository that can
 
 The client was created with [create-react-app](https://github.com/facebookincubator/create-react-app) (CRA) and the server is a separate Node.js application. The client-server integration is based on this [tutorial](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/) and [repository](https://github.com/fullstackreact/food-lookup-demo). This repository will be referred to as the "top-level" to distinguish it from the client and server.
 
-## Installing Dependencies
+## Installing (and Adding) Dependencies
 
 The skeleton is structured as three separate packages and so the dependencies need to be installed independently in each of the top-level, the client and the server, i.e.:
 
@@ -12,6 +12,14 @@ The skeleton is structured as three separate packages and so the dependencies ne
 npm install
 npm install --prefix client
 npm install --prefix server
+```
+
+The `--prefix` option treats the supplied path as the package root. In this case it is equivalent to `cd client` then `npm install` then `cd ..`.
+
+*You will typically not need to install any dependencies in the top-level `package.json` file*. Most dependencies are needed by the client or the server and should be installed in the respective sub-packages, e.g. to install `react-boostrap` for your client application:
+
+```
+npm install --save react-boostrap --prefix client
 ```
 
 ## Running the Application
