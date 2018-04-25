@@ -6,10 +6,9 @@ The client was created with [create-react-app](https://github.com/facebookincuba
 
 ## Installing (and Adding) Dependencies
 
-The skeleton is structured as three separate packages and so the dependencies need to be installed independently in each of the top-level, the client and the server, i.e.:
+The skeleton is structured as three separate packages. A `postinstall` hook is included at the top level to automatically install the client and server dependencies, i.e. `npm install` also invokes:
 
 ```
-npm install
 npm install --prefix client
 npm install --prefix server
 ```
@@ -24,7 +23,7 @@ npm install --save react-boostrap --prefix client
 
 ## Running the Application
 
-The combined application, client and server, can be run with `npm start` in the top-level directory. `npm start` launches the CRA development server on http://localhost:3000 and the backend server on http://localhost:3001. By setting the `proxy` field in the client `package.json`, the client development server will proxy any unrecognized requests to the server.
+The combined application, client and server, can be run with `npm start` in the top-level directory. `npm start` launches the CRA development server on http://localhost:3000 and the backend server on http://localhost:3001. By setting the `proxy` field in the client `package.json`, the client development server will proxy any unrecognized requests to the server. By default this starts the server in hot-reloading mode (like with the client application).
 
 ## Testing
 

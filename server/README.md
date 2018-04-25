@@ -2,7 +2,7 @@
 
 ## Running
 
-Launch server with `npm run start`. By default the application is available at <http://localhost:3001>.
+Launch server with `npm run start`. By default the application is available at <http://localhost:3001>. Alternately, to enable hot reloading of changes to the server, you can use `npm run watch`.
 
 ## Setup
 

@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.use(express.static(buildPath));
 
-  // Serve the HTML file included in the CRA client
+  // Serve the HTML file included in the CRA client on the root path
   app.get('/', (request, response) => {
     response.sendFile(path.join(buildPath, 'index.html'));
   });
